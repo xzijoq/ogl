@@ -1,6 +1,6 @@
 // OpenGlTest.cpp : This file contains the 'main' function. Program execution
 // begins and ends there. https://learnopengl.com link to some tutorial
-
+// using clang format
 #include <assert.h>
 #include <glad/glad.h>
 #include <glfw3.h>
