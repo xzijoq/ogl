@@ -1,0 +1,2 @@
+* This opengl project is working my using emacs and cmake without any ide
+** not much just a working template with complier flags and all
