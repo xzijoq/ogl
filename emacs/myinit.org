@@ -58,19 +58,8 @@
 	  :ensure t)  
   #+END_SRC
 
-* cmake mode
-  #+BEGIN_SRC emacs-lisp
-    (autoload 'cmake-project-mode "cmake-project" nil t)
-    (require 'cmake-mode)
-  #+END_SRC
 
-* cmake-ide
-  #+BEGIN_SRC emacs-lisp
-    (use-package cmake-ide
-		:ensure t)
-    (cmake-ide-setup)
 
-  #+END_SRC
 * Ace windows for easy window switching
   #+BEGIN_SRC emacs-lisp
     (use-package ace-window
@@ -279,6 +268,18 @@
    )
 
  #+END_SRC
+* cmake-ide
+  #+BEGIN_SRC emacs-lisp
+    (use-package cmake-ide
+		:ensure t)
+    (cmake-ide-setup)
+
+  #+END_SRC
+* cmake mode
+  #+BEGIN_SRC emacs-lisp
+    (autoload 'cmake-project-mode "cmake-project" nil t)
+    (require 'cmake-mode)
+  #+END_SRC
 
 * Dumb jump
  #+BEGIN_SRC emacs-lisp

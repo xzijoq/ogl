@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/qq/cpp/programs/one/build",
+  "command": "/usr/bin/c++   -I/home/qq/cpp/programs/one/include  -Wall -g  -g   -o CMakeFiles/ogl.dir/src/glad.cpp.o -c /home/qq/cpp/programs/one/src/glad.cpp",
+  "file": "/home/qq/cpp/programs/one/src/glad.cpp"
+},
+{
+  "directory": "/home/qq/cpp/programs/one/build",
+  "command": "/usr/bin/c++   -I/home/qq/cpp/programs/one/include  -Wall -g  -g   -o CMakeFiles/ogl.dir/src/main.cpp.o -c /home/qq/cpp/programs/one/src/main.cpp",
+  "file": "/home/qq/cpp/programs/one/src/main.cpp"
+}
+]

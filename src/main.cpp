@@ -80,7 +80,7 @@ int main()
   glEnableVertexAttribArray( 1 );
 #pragma endregion
 
-  glClearColor( 0.2f, 0.3f, 0.3f, 1.0f );
+  glClearColor( 0.3f, 0.3f, 0.3f, 1.0f );
 
   //	int f = 0;
   //	float fk = 0.05f;

@@ -22,7 +22,7 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(package-selected-packages
    (quote
-    (rainbow-delimiters auto-complete company-glsl cmake-ide synosaurus dictionary easy-kill auto-yasnippet treemacs-projectile treemacs dumb-jump ggtags undo-tree virtualenvwrapper elpy flycheck company-jedi irony-eldoc company-irony company counsel ace-window org-bullets which-key clang-format use-package))))
+    (synosaurus dictionary easy-kill auto-yasnippet treemacs-projectile treemacs dumb-jump ggtags undo-tree virtualenvwrapper elpy flycheck company-glsl company-jedi irony-eldoc company-irony company counsel ace-window which-key use-package rainbow-delimiters org-bullets cmake-ide clang-format))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
