@@ -6,6 +6,7 @@ include_directories (${CMAKE_SOURCE_DIR}/include/ )
 link_directories(${CMAKE_SOURCE_DIR}/lib/)
 set(SOURCES ${CMAKE_SOURCE_DIR}/src/glad.cpp ${CMAKE_SOURCE_DIR}/src/main.cpp)
 
+
 add_executable (ogl ${SOURCES})
 target_link_libraries(ogl  ${CMAKE_SOURCE_DIR}/lib/libglfw3.a  -lX11  -lXrandr -lXxf86vm -lXinerama -lXcursor  -pthread -ldl  )
 

@@ -1,9 +1,10 @@
 // OpenGlTest.cpp : This file contains the 'main' function. Program execution
 // begins and ends there. https://learnopengl.com link to some tutorial
 // using clang format
-#include <assert.h>
+
 #include <glad/glad.h>
 #include <glfw3.h>
+#include <cassert>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -37,7 +38,7 @@ int main()
       glfwCreateWindow( 800, 640, "hey", 0, 0 );  // glfw window creation
   if ( !window )
   {
-    std::cout << "window creation failed nigga";
+    std::cout << "window creation failed niggaa";
   }  // check for window creation
   glfwMakeContextCurrent( window );
   if ( !gladLoadGLLoader( (GLADloadproc)glfwGetProcAddress ) )
@@ -151,6 +152,7 @@ unsigned int createProgram( const std::string &vertex_shaderSource,
   glDeleteShader( fs );
   return pid;
 }
+
 static std::string parseShader( const std::string &filepath )
 {
   std::ifstream     stream( filepath );
