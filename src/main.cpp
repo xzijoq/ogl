@@ -20,6 +20,13 @@ static std::string parseShader( const std::string &filepath );
 //-----START MAIN----//
 int main()
 {
+	std::string file_path = __FILE__;
+	std::string dir_path = file_path.substr( 0 , file_path.rfind( "\\" ) );
+	//std::cout << dir_path << std::endl;
+	dir_path.erase(dir_path.end()-3,dir_path.end());							 // more hackey than i like
+	//std::cout << dir_path;
+
+
   assert( sizeof( GLuint ) == sizeof( unsigned int ) );
   // printf("OpenGL version supported by this platform (%s): \n",
   // glGetString(GL_VERSION));CREATE A SEGMENTATION FAULT
@@ -49,9 +56,9 @@ int main()
 
   // SHADER STUFF
   std::string vertex_shader_source =
-      parseShader( "../res/shaders/shader.vert" );
+      parseShader( dir_path + "res/shaders/shader.vert" );
   std::string fragment_shader_source =
-      parseShader( "../res/shaders/shader.frag" );
+      parseShader( dir_path + "res/shaders/shader.frag" );
   unsigned int shaderProgram =
       createProgram( vertex_shader_source, fragment_shader_source );
 
