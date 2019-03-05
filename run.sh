@@ -2,7 +2,7 @@
 
 echo $1
 
-if [[ $1 ]]
+if [[ $1="" ]]
 then
     echo "not reb"
     cp ./build/compile_commands.json ./compile_commands.json 
