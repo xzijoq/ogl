@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -g   -rdynamic CMakeFiles/ogl.dir/src/glad.cpp.o CMakeFiles/ogl.dir/src/main.cpp.o  -o ogl  -L/home/qq/cpp/programs/one/lib  -L/usr/include -Wl,-rpath,/home/qq/cpp/programs/one/lib:/usr/include ../lib/libglfw3.a -lX11 -lXrandr -lXxf86vm -lXinerama -lXcursor -pthread -ldl 

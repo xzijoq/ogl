@@ -1,0 +1,4 @@
+# ninja log v5
+0	115	1551780571	CMakeFiles/ogl.dir/src/glad.cpp.o	1e7b3a7c1183594a
+0	343	1551780572	CMakeFiles/ogl.dir/src/main.cpp.o	a8c7e2bd33d7ad93
+343	441	1551780572	ogl	88488be8312c0c88

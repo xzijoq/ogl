@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/home/qq/cpp/ogl/build",
+  "command": "/usr/bin/c++   -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/main.cpp.o -c /home/qq/cpp/ogl/src/main.cpp",
+  "file": "/home/qq/cpp/ogl/src/main.cpp"
+},
+
+{
+  "directory": "/home/qq/cpp/ogl/build",
+  "command": "/usr/bin/c++   -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/glad.cpp.o -c /home/qq/cpp/ogl/src/glad.cpp",
+  "file": "/home/qq/cpp/ogl/src/glad.cpp"
+}
+]

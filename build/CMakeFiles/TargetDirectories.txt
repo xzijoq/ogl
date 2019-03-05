@@ -1,3 +1,3 @@
-/home/qq/cpp/programs/one/build/CMakeFiles/rebuild_cache.dir
-/home/qq/cpp/programs/one/build/CMakeFiles/ogl.dir
-/home/qq/cpp/programs/one/build/CMakeFiles/edit_cache.dir
+/home/qq/cpp/ogl/build/CMakeFiles/rebuild_cache.dir
+/home/qq/cpp/ogl/build/CMakeFiles/edit_cache.dir
+/home/qq/cpp/ogl/build/CMakeFiles/ogl.dir
