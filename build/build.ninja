@@ -63,8 +63,8 @@ build CMakeFiles/ogl.dir/src/main.cpp.o: CXX_COMPILER__ogl ../src/main.cpp || cm
   OBJECT_FILE_DIR = CMakeFiles/ogl.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/ogl.dir/
   TARGET_PDB = ogl.pdb
-build CMakeFiles/ogl.dir/src/glad.cpp.o: CXX_COMPILER__ogl ../src/glad.cpp || cmake_object_order_depends_target_ogl
-  DEP_FILE = CMakeFiles/ogl.dir/src/glad.cpp.o.d
+build CMakeFiles/ogl.dir/src/glad.c.o: C_COMPILER__ogl ../src/glad.c || cmake_object_order_depends_target_ogl
+  DEP_FILE = CMakeFiles/ogl.dir/src/glad.c.o.d
   INCLUDES = -I../include -I../lib -I/usr/include/SDL2
   OBJECT_DIR = CMakeFiles/ogl.dir
   OBJECT_FILE_DIR = CMakeFiles/ogl.dir/src
@@ -78,7 +78,7 @@ build CMakeFiles/ogl.dir/src/glad.cpp.o: CXX_COMPILER__ogl ../src/glad.cpp || cm
 #############################################
 # Link the executable ogl
 
-build ogl: CXX_EXECUTABLE_LINKER__ogl CMakeFiles/ogl.dir/src/main.cpp.o CMakeFiles/ogl.dir/src/glad.cpp.o
+build ogl: CXX_EXECUTABLE_LINKER__ogl CMakeFiles/ogl.dir/src/main.cpp.o CMakeFiles/ogl.dir/src/glad.c.o
   LINK_LIBRARIES = -Wl,-rpath,/home/qq/cpp/ogl/lib -lglfw3 -lX11 -lXrandr -lXxf86vm -lXinerama -lXcursor -pthread -ldl
   LINK_PATH = -L/home/qq/cpp/ogl/lib
   OBJECT_DIR = CMakeFiles/ogl.dir

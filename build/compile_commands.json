@@ -7,7 +7,7 @@
 
 {
   "directory": "/home/qq/cpp/ogl/build",
-  "command": "/usr/bin/c++   -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/glad.cpp.o -c /home/qq/cpp/ogl/src/glad.cpp",
-  "file": "/home/qq/cpp/ogl/src/glad.cpp"
+  "command": "/usr/bin/cc  -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/glad.c.o   -c /home/qq/cpp/ogl/src/glad.c",
+  "file": "/home/qq/cpp/ogl/src/glad.c"
 }
 ]
