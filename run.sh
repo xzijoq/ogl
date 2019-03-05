@@ -14,7 +14,7 @@ if [[ $1  = f  || $2 = f ]]
 then
     echo "rebuilding"
     rm -r build
-    cmake -S./ -B build -G "Ninja"
+    cmake -S./ -B build -DCMAKE_BUILD_TYPE=Debug -G "Ninja" 
 
     cmake --build build
     cp ./build/compile_commands.json ./compile_commands.json 

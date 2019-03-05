@@ -1,6 +1,6 @@
 The system is: Linux - 4.15.0-45-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/cc 
+Compiler: /usr/lib/llvm-8/bin/clang-8 
 Build flags: 
 Id flags:  
 
@@ -13,7 +13,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is Clang, found in "/home/qq/cpp/ogl/build/CMakeFiles/3.13.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
+Compiler: /usr/lib/llvm-8/bin/clang++ 
 Build flags: 
 Id flags:  
 
@@ -28,60 +28,52 @@ The CXX compiler identification is Clang, found in "/home/qq/cpp/ogl/build/CMake
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_42b42"
-[1/2] Building C object CMakeFiles/cmTC_42b42.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_42b42
+Run Build Command:"/usr/bin/ninja" "cmTC_4906f"
+[1/2] Building C object CMakeFiles/cmTC_4906f.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_4906f
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_b562f"
-[1/2] Building C object CMakeFiles/cmTC_b562f.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_b562f
+Run Build Command:"/usr/bin/ninja" "cmTC_c6a21"
+[1/2] Building C object CMakeFiles/cmTC_c6a21.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_c6a21
 clang version 8.0.0-svn354892-1~exp1~20190226195658.47 (branches/release_80)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
-InstalledDir: /usr/bin
-Found candidate GCC installation: /usr/bin/../lib/gcc/i686-linux-gnu/8
-Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
-Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0
-Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+InstalledDir: /usr/lib/llvm-8/bin
 Found candidate GCC installation: /usr/lib/gcc/i686-linux-gnu/8
 Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
 Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
 Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
-Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b562f /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_b562f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c6a21 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_c6a21.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_b562f"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_b562f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_b562f]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_c6a21"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_c6a21.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_c6a21]
   ignore line: [clang version 8.0.0-svn354892-1~exp1~20190226195658.47 (branches/release_80)]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [InstalledDir: /usr/bin]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/i686-linux-gnu/8]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [InstalledDir: /usr/lib/llvm-8/bin]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/i686-linux-gnu/8]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
-  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
   ignore line: [Candidate multilib: .]
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b562f /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_b562f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c6a21 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_c6a21.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-zrelro] ==> ignore
     arg [--hash-style=gnu] ==> ignore
@@ -92,20 +84,20 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b562f] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o] ==> ignore
-    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8]
-    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
+    arg [cmTC_c6a21] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
     arg [-L/usr/lib/llvm-8/bin/../lib] ==> dir [/usr/lib/llvm-8/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_b562f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_c6a21.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -115,14 +107,14 @@ Parsed C implicit link information from above output:
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [--no-as-needed] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
-  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
   collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
   collapse library dir [/usr/lib/llvm-8/bin/../lib] ==> [/usr/lib/llvm-8/lib]
   collapse library dir [/lib] ==> [/lib]
   collapse library dir [/usr/lib] ==> [/usr/lib]
@@ -136,9 +128,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_fe2c9"
-[1/2] Building C object CMakeFiles/cmTC_fe2c9.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_fe2c9
+Run Build Command:"/usr/bin/ninja" "cmTC_a59cd"
+[1/2] Building C object CMakeFiles/cmTC_a59cd.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_a59cd
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -150,9 +142,9 @@ Run Build Command:"/usr/bin/ninja" "cmTC_fe2c9"
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_f58c6"
-[1/2] Building C object CMakeFiles/cmTC_f58c6.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_f58c6
+Run Build Command:"/usr/bin/ninja" "cmTC_6506a"
+[1/2] Building C object CMakeFiles/cmTC_6506a.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_6506a
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -164,9 +156,9 @@ Run Build Command:"/usr/bin/ninja" "cmTC_f58c6"
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_5e247"
-[1/2] Building C object CMakeFiles/cmTC_5e247.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_5e247
+Run Build Command:"/usr/bin/ninja" "cmTC_497da"
+[1/2] Building C object CMakeFiles/cmTC_497da.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_497da
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -176,60 +168,52 @@ Run Build Command:"/usr/bin/ninja" "cmTC_5e247"
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_cc65b"
-[1/2] Building CXX object CMakeFiles/cmTC_cc65b.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_cc65b
+Run Build Command:"/usr/bin/ninja" "cmTC_dd152"
+[1/2] Building CXX object CMakeFiles/cmTC_dd152.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_dd152
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_70319"
-[1/2] Building CXX object CMakeFiles/cmTC_70319.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_70319
+Run Build Command:"/usr/bin/ninja" "cmTC_5deef"
+[1/2] Building CXX object CMakeFiles/cmTC_5deef.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_5deef
 clang version 8.0.0-svn354892-1~exp1~20190226195658.47 (branches/release_80)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
-InstalledDir: /usr/bin
-Found candidate GCC installation: /usr/bin/../lib/gcc/i686-linux-gnu/8
-Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
-Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0
-Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+InstalledDir: /usr/lib/llvm-8/bin
 Found candidate GCC installation: /usr/lib/gcc/i686-linux-gnu/8
 Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
 Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0
 Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
-Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_70319 /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_70319.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5deef /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5deef.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_70319"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_70319.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_70319]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_5deef"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_5deef.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_5deef]
   ignore line: [clang version 8.0.0-svn354892-1~exp1~20190226195658.47 (branches/release_80)]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [InstalledDir: /usr/bin]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/i686-linux-gnu/8]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0]
-  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [InstalledDir: /usr/lib/llvm-8/bin]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/i686-linux-gnu/8]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.3.0]
   ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
-  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
   ignore line: [Candidate multilib: .]
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_70319 /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_70319.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5deef /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5deef.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-zrelro] ==> ignore
     arg [--hash-style=gnu] ==> ignore
@@ -240,20 +224,20 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_70319] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o] ==> ignore
-    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8]
-    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
+    arg [cmTC_5deef] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
     arg [-L/usr/lib/llvm-8/bin/../lib] ==> dir [/usr/lib/llvm-8/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_70319.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_5deef.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -261,14 +245,14 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o] ==> ignore
-    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
-  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
   collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
   collapse library dir [/usr/lib/llvm-8/bin/../lib] ==> [/usr/lib/llvm-8/lib]
   collapse library dir [/lib] ==> [/lib]
   collapse library dir [/usr/lib] ==> [/usr/lib]
@@ -282,9 +266,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_313b4"
-[1/2] Building CXX object CMakeFiles/cmTC_313b4.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_313b4
+Run Build Command:"/usr/bin/ninja" "cmTC_04bf1"
+[1/2] Building CXX object CMakeFiles/cmTC_04bf1.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_04bf1
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -349,9 +333,9 @@ Run Build Command:"/usr/bin/ninja" "cmTC_313b4"
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_9e34b"
-[1/2] Building CXX object CMakeFiles/cmTC_9e34b.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_9e34b
+Run Build Command:"/usr/bin/ninja" "cmTC_e9f53"
+[1/2] Building CXX object CMakeFiles/cmTC_e9f53.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e9f53
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -416,9 +400,9 @@ Run Build Command:"/usr/bin/ninja" "cmTC_9e34b"
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_6403f"
-[1/2] Building CXX object CMakeFiles/cmTC_6403f.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_6403f
+Run Build Command:"/usr/bin/ninja" "cmTC_3f5be"
+[1/2] Building CXX object CMakeFiles/cmTC_3f5be.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_3f5be
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -483,9 +467,9 @@ Run Build Command:"/usr/bin/ninja" "cmTC_6403f"
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_6534a"
-[1/2] Building CXX object CMakeFiles/cmTC_6534a.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_6534a
+Run Build Command:"/usr/bin/ninja" "cmTC_fb89e"
+[1/2] Building CXX object CMakeFiles/cmTC_fb89e.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_fb89e
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -550,9 +534,9 @@ Run Build Command:"/usr/bin/ninja" "cmTC_6534a"
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/qq/cpp/ogl/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_07fdf"
-[1/2] Building CXX object CMakeFiles/cmTC_07fdf.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_07fdf
+Run Build Command:"/usr/bin/ninja" "cmTC_522c5"
+[1/2] Building CXX object CMakeFiles/cmTC_522c5.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_522c5
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

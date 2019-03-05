@@ -1,3 +1,4 @@
+
 namespace windowData
 {
   const int oglMajor = 4;
@@ -5,3 +6,4 @@ namespace windowData
   const int scWid = 600;
   const int scHei = 800;
 } 
+

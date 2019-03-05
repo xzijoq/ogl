@@ -1,13 +1,19 @@
 [
 {
   "directory": "/home/qq/cpp/ogl/build",
-  "command": "/usr/bin/c++   -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/main.cpp.o -c /home/qq/cpp/ogl/src/main.cpp",
+  "command": "/usr/lib/llvm-8/bin/clang++   -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/main.cpp.o -c /home/qq/cpp/ogl/src/main.cpp",
   "file": "/home/qq/cpp/ogl/src/main.cpp"
 },
 
 {
   "directory": "/home/qq/cpp/ogl/build",
-  "command": "/usr/bin/cc  -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/glad.c.o   -c /home/qq/cpp/ogl/src/glad.c",
+  "command": "/usr/lib/llvm-8/bin/clang-8  -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/glad.c.o   -c /home/qq/cpp/ogl/src/glad.c",
   "file": "/home/qq/cpp/ogl/src/glad.c"
+},
+
+{
+  "directory": "/home/qq/cpp/ogl/build",
+  "command": "/usr/lib/llvm-8/bin/clang++   -I../include -I../lib -I/usr/include/SDL2    -o CMakeFiles/ogl.dir/src/initWindow.cpp.o -c /home/qq/cpp/ogl/src/initWindow.cpp",
+  "file": "/home/qq/cpp/ogl/src/initWindow.cpp"
 }
 ]
