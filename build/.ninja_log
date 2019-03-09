@@ -1,5 +1,5 @@
 # ninja log v5
-0	354	1551800943	CMakeFiles/ogl.dir/src/initWindow.cpp.o	709b9e020c23ef84
-0	397	1551800943	CMakeFiles/ogl.dir/src/main.cpp.o	43dc6cba8b67f52e
-0	754	1551800943	CMakeFiles/ogl.dir/src/glad.c.o	24e409b173609300
-754	872	1551800943	ogl	da69d39ab227582b
+0	341	1552158921	CMakeFiles/ogl.dir/src/initWindow.cpp.o	3954430d6b51c081
+0	384	1552158921	CMakeFiles/ogl.dir/src/main.cpp.o	ebbacc173d001aca
+0	709	1552158921	CMakeFiles/ogl.dir/src/glad.c.o	149bceb7de4a51ae
+709	831	1552158921	ogl	7b376572aa4c12b8
