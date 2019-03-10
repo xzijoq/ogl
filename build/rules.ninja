@@ -25,7 +25,7 @@ rule CUSTOM_COMMAND
 rule C_COMPILER__ogl
   depfile = $DEP_FILE
   deps = gcc
-  command = /usr/bin/cc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
+  command = /usr/bin/clang-8 $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
   description = Building C object $out
 
 
@@ -35,7 +35,7 @@ rule C_COMPILER__ogl
 rule CXX_COMPILER__ogl
   depfile = $DEP_FILE
   deps = gcc
-  command = /usr/bin/c++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = /usr/bin/clang++-8  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -43,7 +43,7 @@ rule CXX_COMPILER__ogl
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__ogl
-  command = $PRE_LINK && /usr/bin/c++  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = $PRE_LINK && /usr/bin/clang++-8  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 

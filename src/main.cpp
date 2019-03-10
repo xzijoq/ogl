@@ -19,7 +19,6 @@ extern GLFWwindow *window;
 int main()
 {
   initWinGlfw();
-
   std::string vertex_shader_source = parseShader( "./res/shaders/shader.vert" );
   std::string fragment_shader_source =
   parseShader( "./res/shaders/shader.frag" );
@@ -28,6 +27,7 @@ int main()
   unsigned int vbo, vao, ebo;
   glGenVertexArrays( 1, &vao );
   glBindVertexArray( vao );
+  
 
   glGenBuffers( 1, &vbo );
   glBindBuffer( GL_ARRAY_BUFFER, vbo );

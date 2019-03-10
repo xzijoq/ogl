@@ -3,3 +3,7 @@
 0	384	1552158921	CMakeFiles/ogl.dir/src/main.cpp.o	ebbacc173d001aca
 0	709	1552158921	CMakeFiles/ogl.dir/src/glad.c.o	149bceb7de4a51ae
 709	831	1552158921	ogl	7b376572aa4c12b8
+0	365	1552159391	CMakeFiles/ogl.dir/src/main.cpp.o	59ed02a14e91219c
+0	381	1552159391	CMakeFiles/ogl.dir/src/initWindow.cpp.o	d8452b127d862f03
+0	587	1552159391	CMakeFiles/ogl.dir/src/glad.c.o	61efd5858aab3318
+587	705	1552159391	ogl	fd32e00bc6d2e0da

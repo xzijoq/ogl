@@ -1,219 +1,60 @@
 #+STARTUP: overview 
 #+PROPERTY: header-args :comments yes :results silent
-* repos
- #+BEGIN_SRC emacs-lisp
-  (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
- #+END_SRC
-* clangFormat
- #+Begin_SRC emacs-lisp
-   (use-package clang-format
-	       :ensure t
-	       :config
-   (global-set-key (kbd "C-c i") 'clang-format-region)
-   (global-set-key (kbd "C-c u") 'clang-format-buffer)
-
-   (setq clang-format-style-option "llvm")
-   )
- #+END_SRC
 * interface tweaks
- #+BEGIN_SRC emacs-lisp
-   (setq inhibit-startup-message t)
-   (tool-bar-mode -1)
-   (fset 'yes-or-no-p 'y-or-n-p)
-   (winner-mode 1)
-   (global-set-key (kbd "<f5>") 'revert-buffer)
-   ;(custom-set-variables
-   ;  '(initial-frame-alist (quote ((fullscreen . maximized)))))
- #+END_SRC
+  #+BEGIN_SRC emacs-lisp
+    (setq inhibit-startup-message t)
+    (tool-bar-mode -1)
+    (fset 'yes-or-no-p 'y-or-n-p)
+    (winner-mode 1)
+    (global-set-key (kbd "<f5>") 'revert-buffer)
+    ;(custom-set-variables
+    ;  '(initial-frame-alist (quote ((fullscreen . maximized)))))
+  #+END_SRC
 
-* rainbow-delimiters
- #+BEGIN_SRC emacs-lisp
-   (use-package rainbow-delimiters
-     :ensure t
-     :config
-        (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-    )
-
- #+END_SRC
 * which key
-  Brings up some help
   #+BEGIN_SRC emacs-lisp
-  (use-package which-key
-	:ensure t 
-	:config
-	(which-key-mode))
+    (use-package which-key
+      :ensure t 
+      :config
+        (which-key-mode))
   #+END_SRC
 
-* Org mode
-  Org bullets makes things look pretty
+* cmake mode 
   #+BEGIN_SRC emacs-lisp
-	(setq org-src-tab-acts-natively t)
-
-	(use-package org 
-	  :ensure t
-	  :pin org)
-
-	(use-package org-bullets
-	  :ensure t)  
+    ;; if cmake installed via pip3
+    (setq load-path (cons (expand-file-name  "/home/qq/.local/lib/python3.6/site-packages/cmake/data/share/cmake-3.13/editors/emacs/cmake-mode") load-path))
+    (use-package cmake-mode
+      :ensure t)
   #+END_SRC
 
-* cmake mode
+* ivy/counsel/swiper
   #+BEGIN_SRC emacs-lisp
-    (autoload 'cmake-project-mode "cmake-project" nil t)
-    (require 'cmake-mode)
-  #+END_SRC
-
-* cmake-ide
-  #+BEGIN_SRC emacs-lisp
-    (use-package cmake-ide
-		:ensure t)
-    (cmake-ide-setup)
-
-  #+END_SRC
-* Ace windows for easy window switching
-  #+BEGIN_SRC emacs-lisp
-    (use-package ace-window
-      :ensure t
+    (use-package counsel
+      :ensure t 
       :init
-      (progn
-	(setq aw-scope 'frame)
-	(global-set-key (kbd "C-x O") 'other-frame)
-	(global-set-key [remap other-window] 'ace-window)
-	(custom-set-faces
-	 '(aw-leading-char-face
-	   ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
-	))
-  #+END_SRC
-
-  #+RESULTS:
-
-* Swiper / Ivy / Counsel
-  Swiper gives us a really efficient incremental search with regular expressions
-  and Ivy / Counsel replace a lot of ido or helms completion functionality
-  #+BEGIN_SRC emacs-lisp
-     (use-package counsel
-       :ensure t
-       :bind
-       (("M-y" . counsel-yank-pop)
-	:map ivy-minibuffer-map
-	("M-y" . ivy-next-line)))
-
+        (counsel-mode 1))
     (use-package ivy
-      :ensure t
-      :diminish (ivy-mode)
-      :bind (("C-x b" . ivy-switch-buffer))
-      :config
-      (ivy-mode 1)
-      (setq ivy-use-virtual-buffers t)
-      (setq ivy-count-format "%d/%d ")
-      (setq ivy-display-style 'fancy))
-
+      :ensure t 
+      :init
+        (ivy-mode 1))
     (use-package swiper
-      :ensure t
-      :bind (("C-s" . swiper)
-	     ("C-r" . swiper)
-	     ("C-c C-r" . ivy-resume)
-	     ("M-x" . counsel-M-x)
-	     ("C-x C-f" . counsel-find-file))
-      :config
-      (progn
-	(ivy-mode 1)
-	(setq ivy-use-virtual-buffers t)
-	(setq ivy-display-style 'fancy)
-	(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-      ))
+      :ensure t 
+      :bind 
+        (("C-s" . swiper)
+        ("C-r" . swiper)))
   #+END_SRC
 
-* Avy - navigate by searching for a letter on the screen and jumping to it
-  See https://github.com/abo-abo/avy for more info
+* company
   #+BEGIN_SRC emacs-lisp
-  (use-package avy
-  :ensure t
-  :bind ("M-s" . avy-goto-word-1)) ;; changed from char as per jcs
-  #+END_SRC
-
-* Autocomplete
-  #+BEGIN_SRC emacs-lisp  :tangle no
-     (use-package auto-complete 
-     :ensure t
-     :init
-     (progn
-     (ac-config-default)
-       (global-auto-complete-mode t)
-      ))
-  #+END_SRC
-* Company
- #+BEGIN_SRC emacs-lisp
-       (use-package company
-       :ensure t
-       :config
-       (setq company-idle-delay 0)
-       (setq company-minimum-prefix-length 2)
-
-       (global-company-mode t)
-       )
-
-       (use-package company-irony
-       :ensure t
-       :config 
-       (add-to-list 'company-backends 'company-irony)
-
-       )
-
-       (use-package irony
-       :ensure t
-       :config
-       (add-hook 'c++-mode-hook 'irony-mode)
-       (add-hook 'c-mode-hook 'irony-mode)
-       (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-       )
-
-       (use-package irony-eldoc
-       :ensure t
-       :config
-       (add-hook 'irony-mode-hook #'irony-eldoc))
-
-       (defun my/python-mode-hook ()
-	 (add-to-list 'company-backends 'company-jedi))
-
-       (add-hook 'python-mode-hook 'my/python-mode-hook)
-       (use-package company-jedi
-	   :ensure t
-	   :config
-	   (add-hook 'python-mode-hook 'jedi:setup)
-	      )
-       (use-package company-glsl
-	 :ensure t
-	    :config
-	    (when (executable-find "glslangValidator")
-	     (add-to-list 'company-backends 'company-glsl)))
-
-       (defun my/python-mode-hook ()
-	 (add-to-list 'company-backends 'company-jedi))
-
-	 (add-hook 'python-mode-hook 'my/python-mode-hook)
-
-       ;; company box mode
-       ;(use-package company-box
-       ;:ensure t
-       ;  :hook (company-mode . company-box-mode)) 
-
-
- #+END_SRC
-
-* Reveal.js
-  #+BEGIN_SRC emacs-lisp  :tangle no
-      (use-package ox-reveal
-      :ensure t
+    (use-package company
+      :ensure t 
       :config
-	(require 'ox-reveal)
-	(setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/")
-	(setq org-reveal-mathjax t)
-	)
-	(use-package htmlize
-	:ensure t)
-  #+END_SRC  
+        (add-hook 'after-init-hook 'global-company-mode)     
+        (setq company-idle-delay 0)
+        (setq company-minimum-prefix-length 2)
+    )
+  #+END_SRC
 * Flycheck
   #+BEGIN_SRC emacs-lisp
     (use-package flycheck
@@ -221,141 +62,75 @@
       :init
       (global-flycheck-mode t))
   #+END_SRC
-* Python
+
+* lsp-language support protocol
+  ;;TODO: xwidget-webkit-mode
+  ;; sudo apt install  libwebkitgtk-dev
   #+BEGIN_SRC emacs-lisp
-
-        (setq py-python-command "python3")
-        (setq python-shell-interpreter "python3")
- 
-
-            (use-package elpy
-            :ensure t
-            :config 
-            (elpy-enable))
-
-        (use-package virtualenvwrapper
-          :ensure t
-          :config
-          (venv-initialize-interactive-shells)
-          (venv-initialize-eshell))
+    (use-package lsp-mode
+      :ensure t 
+      :commands lsp-ui-mode
+    )
+    (use-package lsp-ui
+      :ensure t 
+      :commands lsp-ui-mode
+    )
+    (use-package company-lsp
+      :ensure t 
+      :commands company-lsp
+    )
+    (push 'company-lsp company-backends)
 
   #+END_SRC
-* Yasnippet
-  #+BEGIN_SRC emacs-lisp
-    (use-package yasnippet
-      :ensure t
-      :init
-        (yas-global-mode 1))
 
-;    (use-package yasnippet-snippets
-;      :ensure t)
-  #+END_SRC
-
-  #+RESULTS:
-
-* Undo Tree
-  #+BEGIN_SRC emacs-lisp
-    (use-package undo-tree
-      :ensure t
-      :init
-      (global-undo-tree-mode))
-  #+END_SRC
-* Better Shell
- #+BEGIN_SRC emacs-lisp :tangle no
-   (use-package better-shell
-       :ensure t
-       :bind (("C-\"" . better-shell-shell)
-	      ("C-:" . better-shell-remote-open)))
- #+END_SRC
 * c++
- #+BEGIN_SRC emacs-lisp
-   (use-package ggtags
-   :ensure t
-   :config 
-   (add-hook 'c-mode-common-hook
-	     (lambda ()
-	       (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-		 (ggtags-mode 1))))
-   )
+  ** clangFormat
+  #+Begin_SRC emacs-lisp
+    (use-package clang-format
+        :ensure t
+        :config
+          (global-set-key (kbd "C-c i") 'clang-format-region)
+          (global-set-key (kbd "C-c u") 'clang-format-buffer)
+        (setq clang-format-style-option "llvm"))
+    #+END_SRC
+  ** rtags
+    remeber to rtags-install
+    #+BEGIN_SRC emacs-lisp
+      (use-package rtags
+        :ensure t 
+      )
+    #+END_SRC
+  ** irony c++
+    #+BEGIN_SRC emacs-lisp
+      (use-package irony
+        :ensure t 
+        :config
+          (add-hook 'c++-mode-hook 'irony-mode)
+          (add-hook 'c-mode-hook 'irony-mode)
+          (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+          )
+      (use-package company-irony
+        :ensure t
+        :config 
+          (add-to-list 'company-backends 'company-irony))      
+      (use-package irony-eldoc
+        :ensure t
+        :config
+          (add-hook 'irony-mode-hook #'irony-eldoc))
+    #+END_SRC
+  ** rainbow-delimiters
+    #+BEGIN_SRC emacs-lisp
+      (use-package rainbow-delimiters
+        :ensure t
+        :config
+          (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+    #+END_SRC
+  ** cmake-ide 
+    #+BEGIN_SRC emacs-lisp
+      (use-package cmake-ide
+        :ensure t
+      )
+      (cmake-ide-setup)
+    #+END_SRC
 
- #+END_SRC
 
-* Dumb jump
- #+BEGIN_SRC emacs-lisp
-
-   (use-package dumb-jump
-     :bind (("M-g o" . dumb-jump-go-other-window)
-	    ("M-g j" . dumb-jump-go)
-	    ("M-g x" . dumb-jump-go-prefer-external)
-	    ("M-g z" . dumb-jump-go-prefer-external-other-window))
-     :config 
-     ;; (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-   :init
-   (dumb-jump-mode)
-     :ensure
-   )
- #+END_SRC
-* Treemacs
- #+BEGIN_SRC emacs-lisp
-   (use-package treemacs
-       :ensure t
-       :defer t
-       :config
-       (progn
-
-	 (setq treemacs-follow-after-init          t
-	       treemacs-width                      35
-	       treemacs-indentation                2
-	       treemacs-git-integration            t
-	       treemacs-collapse-dirs              3
-	       treemacs-silent-refresh             nil
-	       treemacs-change-root-without-asking nil
-	       treemacs-sorting                    'alphabetic-desc
-	       treemacs-show-hidden-files          t
-	       treemacs-never-persist              nil
-	       treemacs-is-never-other-window      nil
-	       treemacs-goto-tag-strategy          'refetch-index)
-
-	 (treemacs-follow-mode t)
-	 (treemacs-filewatch-mode t))
-       :bind
-       (:map global-map
-	     ([f8]        . treemacs-toggle)
-	     ([f9]        . treemacs-projectile-toggle)
-	     ("<C-M-tab>" . treemacs-toggle)
-	     ("M-0"       . treemacs-select-window)
-	     ("C-c 1"     . treemacs-delete-other-windows)
-	   ))
-     (use-package treemacs-projectile
-       :defer t
-       :ensure t
-       :config
-       (setq treemacs-header-function #'treemacs-projectile-create-header)
-   )
-
- #+END_SRC
-
-* auto-yasnippet
- #+BEGIN_SRC emacs-lisp
-   (use-package auto-yasnippet
-   :ensure t)
- #+END_SRC
-
-* Easy kill
- #+BEGIN_SRC emacs-lisp
-   (use-package easy-kill
-     :ensure t
-     :config
-     (global-set-key [remap kill-ring-save] #'easy-kill)
-     (global-set-key [remap mark-sexp] #'easy-mark))
-
- #+END_SRC
-
-* Word stuff
- #+BEGIN_SRC emacs-lisp
-   (use-package dictionary
-     :ensure t)
-
-   (use-package synosaurus
-     :ensure t)
-  #+END_SRC
